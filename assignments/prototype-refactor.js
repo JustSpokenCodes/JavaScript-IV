@@ -52,10 +52,14 @@ function GameObject(options) {
   }
   
   //#########################
-
+  class CharacterStats extends name {
+    healthPoints(){
+      super.healthPoints();
+      console.log(`${this.name} took damage.`);
+    }
+  }
   // Sets up inheritance with GameObject
   CharacterStats.prototype = Object.create(GameObject.prototype);
-  
   CharacterStats.prototype.takeDamage = function () {
     return `${this.name} took damage.`;
   };
@@ -82,3 +86,11 @@ function GameObject(options) {
     return `${this.name} offers a greeting in ${this.language}.`;
   };
   
+//####################################
+  class Humanoid extends Humanoid {
+    characterStats(){
+      super.characterStats();
+      console.log(`${this.name} offers a greeting in ${this.language}.`)
+    }
+    
+  }
