@@ -23,6 +23,21 @@ function GameObject(options) {
     return `${this.name} was removed from the game.`;
   };
   
+
+  //###########################
+
+  class GameObject {
+    constructor(createdAt,dimensions,name){
+      this.createdAt = createdAt;
+      this.dimensions = dimensions;
+      this.name = name;
+    }
+    destroy(){
+      `${this.name} was removed from the game.`;
+    }
+  }
+
+
   /*
   === CharacterStats ===
   * healthPoints
@@ -36,6 +51,8 @@ function GameObject(options) {
     this.healthPoints = characterStatsOptions.healthPoints;
   }
   
+  //#########################
+
   // Sets up inheritance with GameObject
   CharacterStats.prototype = Object.create(GameObject.prototype);
   
